@@ -16,10 +16,13 @@ window.addEventListener('scroll', () => {
     : 'none';
 });
 
-// Highlight the nav link matching the current page
-const current = window.location.pathname.split('/').pop() || 'index.html';
+// Highlight nav link matching the current page
+const path = window.location.pathname;
 document.querySelectorAll('.nav-links a').forEach(link => {
-  if (link.getAttribute('href') === current) {
+  const href = link.getAttribute('href');
+  if (href === '/' && (path === '/' || path === '')) {
+    link.classList.add('active');
+  } else if (href !== '/' && path.startsWith(href)) {
     link.classList.add('active');
   }
 });

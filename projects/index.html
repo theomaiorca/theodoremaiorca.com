@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects — Theo Maiorca</title>
+  <meta name="description" content="Hardware and firmware projects by Theo Maiorca.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a class="nav-brand" href="/">Theo Maiorca</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="/">Home</a></li>
+        <li><a href="/projects/">Projects</a></li>
+        <li><a href="/hobbies/">Hobbies</a></li>
+        <li><a href="/contact/">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="section page-top section-projects">
+    <div class="container">
+      <h2 class="section-title">Projects</h2>
+      <p class="page-intro">Things I've built. More to come.</p>
+
+      <div class="project-list">
+
+        <div class="project-item">
+          <div class="project-image">
+            <!-- Add photo: save as /assets/images/arduino-tester.jpg then uncomment below -->
+            <!-- <img src="/assets/images/arduino-tester.jpg" alt="Arduino Reaction Time Tester"> -->
+            <span class="photo-placeholder">Project photo<br>/assets/images/arduino-tester.jpg</span>
+          </div>
+          <div class="project-body">
+            <div class="project-meta">
+              <span class="card-type">Solo Project</span>
+            </div>
+            <h3 class="project-title">Arduino Light vs Sound Reaction Time Tester</h3>
+            <p class="project-desc">Wanted to actually know whether you react faster to sound or light. Built a setup to test it: Arduino in C++, hardware interrupts for millisecond timing, randomized light and sound stimuli, results live on an LCD. Turns out sound is faster, usually.</p>
+            <div class="card-tags">
+              <span class="tag">C++</span>
+              <span class="tag">Arduino</span>
+              <span class="tag">Hardware Interrupts</span>
+              <span class="tag">LCD Display</span>
+              <span class="tag">Breadboard</span>
+            </div>
+            <!-- Uncomment once you have a GitHub repo:
+            <a class="card-link" href="https://github.com/theomaiorca/arduino-reaction-tester" target="_blank" rel="noopener">View on GitHub →</a>
+            -->
+          </div>
+        </div>
+
+        <div class="project-item">
+          <div class="project-image">
+            <!-- Add photo: save as /assets/images/dac-pcb.jpg then uncomment below -->
+            <!-- <img src="/assets/images/dac-pcb.jpg" alt="4-bit DAC PCB"> -->
+            <span class="photo-placeholder">Project photo<br>/assets/images/dac-pcb.jpg</span>
+          </div>
+          <div class="project-body">
+            <div class="project-meta">
+              <span class="card-type">3-Person Lab Project · Cal Poly SLO</span>
+            </div>
+            <h3 class="project-title">4-bit Digital-to-Analog Converter (DAC)</h3>
+            <p class="project-desc">First time I went from a schematic all the way to a physical PCB. Simulated a 4-bit DAC in LTSpice using an R-2R resistor ladder — two resistor values, 16 voltage levels. Laid it out on a 1"×1" board in Fusion 360, soldered the SMD parts, verified output on an oscilloscope. All 16 steps came out clean.</p>
+            <div class="card-tags">
+              <span class="tag">LTSpice</span>
+              <span class="tag">Autodesk Fusion 360</span>
+              <span class="tag">PCB Design</span>
+              <span class="tag">SMD Components</span>
+              <span class="tag">Op-Amps</span>
+              <span class="tag">Oscilloscope</span>
+            </div>
+            <!-- Uncomment once you have a GitHub repo:
+            <a class="card-link" href="https://github.com/theomaiorca/dac-project" target="_blank" rel="noopener">View on GitHub →</a>
+            -->
+          </div>
+        </div>
+
+        <div class="project-item">
+          <div class="project-image">
+            <!-- Add photo: save as /assets/images/rube-goldberg.jpg then uncomment below -->
+            <!-- <img src="/assets/images/rube-goldberg.jpg" alt="Rube Goldberg Machine Circuit"> -->
+            <span class="photo-placeholder">Project photo<br>/assets/images/rube-goldberg.jpg</span>
+          </div>
+          <div class="project-body">
+            <div class="project-meta">
+              <span class="card-type">Lab Project · Cal Poly SLO · Sep–Dec 2025</span>
+            </div>
+            <h3 class="project-title">Rube Goldberg Machine Circuit</h3>
+            <p class="project-desc">Built a chain-reaction machine where each circuit triggers the next. A capacitive piano detects touches across copper squares and plays notes via Arduino. The correct sequence activates a strobe light, which a light-sensing PCB picks up. That fires a solenoid launching a metal ball down a track into a metal-detecting coil, shifting its frequency. The frequency change cuts power to an electromagnet, dropping a second ball onto a motion-sensing Arduino circuit — end of sequence.</p>
+            <div class="card-tags">
+              <span class="tag">Arduino</span>
+              <span class="tag">C++</span>
+              <span class="tag">Capacitive Sensing</span>
+              <span class="tag">PCB Design</span>
+              <span class="tag">Solenoid</span>
+              <span class="tag">Electromagnet</span>
+              <span class="tag">Frequency Detection</span>
+              <span class="tag">Motion Sensing</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Theo Maiorca &middot; Boulder, CO</p>
+    </div>
+  </footer>
+
+  <script src="/script.js"></script>
+</body>
+</html>
